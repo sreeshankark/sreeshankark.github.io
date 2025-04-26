@@ -1,58 +1,192 @@
+<!-- Copyright 2025 sreeshankar.github.io
+
+This file is a part of
+https://github.com/sreeshankark/sreeshankark.github.io
+
+Author: Sreeshankar K (https://github.com/sreeshankark) -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Sreeshankar K</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="U-XA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sreeshankar K</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="res/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="res/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="res/images/favicon-16x16.png">
+  <link rel="manifest" href="res/manifest/site.webmanifest">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="header">
-        <a href="https://sreeshankark.github.io" class="logo">Sreeshankar K</a>
-        <label class="icons">
-            <i class="bx bx-menu" id="menu-icon"></i>
-        </label>
-        <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="res/SREESHANKAR_K.pdf">My Resume</a>
-        </nav>
-    </header>
-
-    <!-- Home Section -->
-    <section class="home">
-        <div class="home-content">
-            <h2>Hello...</h2>
-            <h1>I'm Sreeshankar K</h1>
-            <h3>Mechanical Engineer</h3>
+  <!-- Home Section -->
+  <div id="home">
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h1><span>S</span>reeshankar.</h1>
         </div>
-        <img class="smudged-image" src="res/photo1.png">
-    </section>
-
-    <!-- About Section -->
-    <section class="hidden">
-        <p>A passionate and motivated Mechanical Engineering graduate with strong analytical and problem-solving skills. Passionate about applying engineering principles to innovative projects and contributing to technology-driven solutions. Proficient in 3D modeling, analysis, and source code management. Excited to collaborate with diverse teams and learn from industry leaders to make a meaningful impact on organizational success.</p>
-    </section>
-
-    <!-- Social Links -->
-    <section class="social-links">
-        <div class="home-soci">
-            <a href="#"><i class='bx bxl-instagram'></i></a>
-            <a href="#"><i class='bx bxl-facebook'></i></a>
-            <a href="#"><i class='bx bxl-twitter'></i></a>
-        </div>
-    </section>
-
-    <!-- Aurora Background -->
-    <div class="aurora-container">
-        <div class="aurora one"></div>
-        <div class="aurora two"></div>
-        <div class="aurora three"></div>
+        <ul id="menu">
+          <li><a href="#home" onclick="closemenu()">Home</a></li>
+          <li><a href="#about" onclick="closemenu()">About</a></li>
+          <li><a href="#portfolio" onclick="closemenu()">Portfolio</a></li>
+          <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+          <i class="fa-solid fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="home-text">
+        <h1>Hi, I am <span>Sreeshankar K</span></h1>
+        <h3>Mechanical Engineer | AOSP Developer</h3>
+        <h2>from Kerala, India</h2>
+      </div>
     </div>
-
-    <script type="text/javascript" src="script.js"></script>
+  </div>
+  <!-- About Section -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="res/images/photo.png">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About <span>Me</span></h1>
+          <p class="about-paragraph">As a passionate mechanical engineering graduate, I thrive at the intersection of
+            technology and innovation.
+            My journey has been fueled by a deep curiosity for open-source projects, problem-solving, and refining my
+            technical expertise. Whether it's tackling engineering challenges or optimizing designs, I am always eager
+            to push boundaries and explore new possibilities. With a strong foundation in mechanical principles, I
+            constantly seek opportunities to learn, create, and contribute to meaningful projects.</p>
+          <div class="tab-title">
+            <p class="tab active-tab" onclick="opentab(skills)">Skills</p>
+            <p class="tab" onclick="opentab(certification)">Certification</p>
+            <p class="tab" onclick="opentab(education)">Education</p>
+            <p class="tab" onclick="opentab(hobbies)">Hobbies</p>
+          </div>
+          <div class="tab-content active-content" id="skills">
+            <div class="split">
+              <ul class="left-list">
+                <li><span>3D Modelling</span><br>Softwares: Creo, SolidWorks, AutoCAD, CATIA</li>
+                <li><span>Analysis</span><br>Softwares: MATLAB, Ansys</li>
+                <li><span>Git</span><br>Source code management</li>
+              </ul>
+              <ul class="right-list">
+                <li><span>Web development</span><br>Languages: HTML, CSS, Javascript</li>
+                <li><span>Microsoft Office tools</span><br>Softwares: Excel, Word, Powerpoint</li>
+                <li><span>Shell scripting</span><br>OS: Linux</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content" id="certification">
+            <div class="split">
+              <ul class="left-list">
+                <li><span>Product Design and Manufacturing</span><br>NPTEL MOOC from IIT Kanpur, India<br>Consolidated
+                  Score: 75%</li>
+              </ul>
+              <ul class="right-list">
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content" id="education">
+            <div class="split">
+              <ul class="left-list">
+                <li><span>B.Tech. Mechanical Engineering</span><br>University: APJ Abdul Kalam Technological University,
+                  Kerala, India<br>Percentage: Ongoing, Expected completion by May 2025</li>
+                <li><span>Class XII - Biological Science</span><br>Education Board: Directorate of Higher Secondary
+                  Education, Kerala, India<br>Percentage: 96.83%</li>
+              </ul>
+              <ul class="right-list">
+                <li><span>Class X</span><br>Education board: Kerala Board of Public Examinations, Kerala,
+                  India<br>Percentage: 95%</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content" id="hobbies">
+            <div class="split">
+              <ul class="left-list">
+                <li><span>Portrait Drawing</span><br>Using charcol, graphite & color pencils</li>
+                <li><span>Travel</span><br>Explore the world</li>
+                <li><span>Driving</span><br>Freedom on wheels</li>
+              </ul>
+              <ul class="right-list">
+                <li><span>AOSP development</span><br>Custom operating system development<br>Custom linux kernel
+                  development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Portfolio -->
+  <div id="portfolio">
+    <div class="container">
+      <div class="sub-title"><span>My</span> Work</div>
+      <div class="work-list">
+        <div class="work">
+          <img src="res/images/work-1.jpg">
+          <div class="layer">
+            <h3><span>Investigation on Hybrid Bladeless Wind Turbine</span></h3>
+            <p>Electricity generation from vortex-induced-vibrations Using linear alternator and piezoelectric
+              transducer</p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="res/images/work-2.jpg">
+          <div class="layer">
+            <h3><span>AOSP Development</span></h3>
+            <p>Maintain, compile, test, release<br>Custom ROMs, recoveries and kernel for selected device</p>
+            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Contact -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Connect with <span>Me</span></h1>
+          <p><i class="fa-solid fa-envelope"></i> sreeshankar0910@gmail.com</p>
+          <div class="social">
+            <a href="https://www.github.com/sreeshankark"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sreeshankar-k"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/sreeshankar.k.1"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/_sk_sanju__"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/_sk_sanju__"><i class="fa-brands fa-x"></i></a>
+            <a href="https://www.t.me/sksanju0910"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://www.discord.gg/E9fSwwRC"><i class="fa-brands fa-discord"></i></a>
+          </div>
+          <a href="res/documents/SREESHANKAR_K.pdf" download class="btn">Download Resume</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name*" required>
+            <input type="email" name="Email" placeholder="Your Email*" required>
+            <textarea name="Message" rows="6" placeholder="Message"></textarea>
+            <p class="field">* Required fields</p>
+            <button type="send" class="btn bt2">Send <i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <span id="sent"></span>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright © 2025 Sreeshankar K</p>
+    </div>
+  </div>
+  <!-- Background aurora effect -->
+  <div class="aurora-container">
+    <div class="aurora one"></div>
+    <div class="aurora two"></div>
+    <div class="aurora three"></div>
+  </div>
 </body>
+<script type="text/javascript" src="script.js"></script>
+<script src="https://kit.fontawesome.com/8f00d8aaa2.js" crossorigin="anonymous"></script>
+
 </html>
