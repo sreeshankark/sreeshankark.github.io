@@ -71,11 +71,22 @@ form.addEventListener('submit', e => {
 	e.preventDefault();
 	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
 		.then(response => {
-				sent.innerHTML = "Message sent sucessfully"
-				setTimeout(function() {
-					sent.innerHTML = ""
-				}, 5000);
-				form.reset();
-			})
+			sent.innerHTML = "Message sent sucessfully"
+			setTimeout(function () {
+				sent.innerHTML = ""
+			}, 5000);
+			form.reset();
+		})
 		.catch(error => console.error('Error!', error.message))
 })
+
+window.addEventListener('scroll', function () {
+	let navbar = document.querySelector('nav');
+
+	if (window.scrollY > 1) {
+		navbar.classList.add('active');
+
+	} else {
+		navbar.classList.remove('active');
+	}
+});
