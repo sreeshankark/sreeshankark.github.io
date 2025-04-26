@@ -609,7 +609,7 @@ nav .fa-solid {
   nav ul .fa-solid {
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px;
     font-size: 20px;
     cursor: pointer;
   }
